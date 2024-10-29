@@ -16,6 +16,7 @@ public class HackingEvent : MonoBehaviour
     private bool gettingHacked = false;
     private bool HackScheduled = false;
     public TextMeshProUGUI hackText;
+    public TextMeshProUGUI hackText2;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class HackingEvent : MonoBehaviour
         endHackButton.gameObject.SetActive(false);
         HackProgressSlider.gameObject.SetActive(false);
         hackText.gameObject.SetActive(false);
+        hackText2.gameObject.SetActive(false);
         gettingHacked = false;
         HackScheduled = false;
         ScheduleNextHack();
@@ -48,7 +50,9 @@ public class HackingEvent : MonoBehaviour
         endHackButton.gameObject.SetActive(true); // show the end hack button
         HackProgressSlider.gameObject.SetActive(true); // show the slider
         hackText.gameObject.SetActive(true);
+        hackText2.gameObject.SetActive(true);
         hackText.text = "Hacking in Progress!!!" + "\n" + "Time Remaining: " + hackDuration + "s";
+        hackText2.text = "End Hack or lose 20% bytes!";
         remainingTime = hackDuration; // reset the timer
         HackProgressSlider.value = HackProgressSlider.maxValue; // set the slider to full
         gettingHacked = true;
@@ -61,13 +65,14 @@ public class HackingEvent : MonoBehaviour
         endHackButton.gameObject.SetActive(false);
         HackProgressSlider.gameObject.SetActive(false);
         hackText.gameObject.SetActive(false);
+        hackText2.gameObject.SetActive(false);
         HackScheduled = false;
         gettingHacked = false;
     }
 
     private void FailHack(){
-        Debug.Log("Hack Failed! Losing 10% of bytes.");
-        GlobalBytes.SetByteCount(GlobalBytes.GetByteCount() - (int)(GlobalBytes.GetByteCount() * 0.1f));
+        Debug.Log("Hack Failed! Losing 20% of bytes.");
+        GlobalBytes.SetByteCount(GlobalBytes.GetByteCount() - (int)(GlobalBytes.GetByteCount() * 0.15f));
         EndHack();
     }
 
@@ -77,6 +82,7 @@ public class HackingEvent : MonoBehaviour
             remainingTime -= Time.deltaTime;
             HackProgressSlider.value = remainingTime / hackDuration;
             hackText.text = "Hacking in Progress!!!" + "\n" + "Time Remaining: " + remainingTime.ToString() + "s";
+            //hackText2.text = "End Hack or lose 15% bytes!";
         }
         else
         {

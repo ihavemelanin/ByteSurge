@@ -10,6 +10,8 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] public static int bytePerClickUpgradeCost = 10;
     [SerializeField] public static int bytePerSecondUpgradeCost = 10;
     [SerializeField] GlobalBytes GlobalBytes;
+    [SerializeField] AudioClip upgradeSound;
+    [SerializeField] AudioSource audioSource;
     public GameObject bytePerClickUpgrade;
     public GameObject bytePerSecondUpgrade;
 
@@ -23,8 +25,9 @@ public class UpgradeManager : MonoBehaviour
     public void BuyBytePerClickUpgrade(){
         if(GlobalBytes.GetByteCount() >= bytePerClickUpgradeCost){
             GlobalBytes.SetByteCount(GlobalBytes.GetByteCount() - bytePerClickUpgradeCost);
-            bytePerClick++;
+            bytePerClick+=5;
             bytePerClickUpgradeCost = bytePerClickUpgradeCost * 2;
+            audioSource.PlayOneShot(upgradeSound);
         }
         bytePerClickUpgrade.GetComponent<TMPro.TextMeshProUGUI>().text = "Buy Byte Per Click Upgrade\nCost: " + bytePerClickUpgradeCost;
     }
@@ -32,8 +35,9 @@ public class UpgradeManager : MonoBehaviour
     public void BuyBytePerSecondUpgrade(){
         if(GlobalBytes.GetByteCount() >= bytePerSecondUpgradeCost){
             GlobalBytes.SetByteCount(GlobalBytes.GetByteCount() - bytePerSecondUpgradeCost);
-            bytePerSecond++;
+            bytePerSecond+=5;
             bytePerSecondUpgradeCost = bytePerSecondUpgradeCost * 2;
+            audioSource.PlayOneShot(upgradeSound);
         }
         bytePerSecondUpgrade.GetComponent<TMPro.TextMeshProUGUI>().text = "Buy Byte Per Second Upgrade\nCost: " + bytePerSecondUpgradeCost;
     }

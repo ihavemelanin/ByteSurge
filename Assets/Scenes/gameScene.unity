@@ -218,7 +218,7 @@ MonoBehaviour:
   hackDuration: 10
   GlobalBytes: {fileID: 173363416}
   hackText: {fileID: 2023231666}
-  hackText2: {fileID: 0}
+  hackText2: {fileID: 803220539}
 --- !u!1 &204729167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2006,37 +2006,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1325628622
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1325628623}
-  m_Layer: 0
-  m_Name: hackingWindow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1325628623
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325628622}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1437.6229, y: 553.87366, z: -11.044943}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1442606563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,8 +2791,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 879527051}
+  - {fileID: 911032214}
   - {fileID: 173363417}
   - {fileID: 997975110}
   - {fileID: 1712881033}
-  - {fileID: 1325628623}
-  - {fileID: 911032214}

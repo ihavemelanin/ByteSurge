@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,18 +9,22 @@ public class GlobalBytes : MonoBehaviour
 {
     private int ByteCount;
     public GameObject ByteDisplay;
-    public int InternalByte;
     private float timer = 0.0f;
     private float passiveByteTimer = 1.0f;
 
+
+    void Start()
+    {
+        ByteCount = 0;
+    }
     void Update()
     {
-        InternalByte = ByteCount;
-        ByteDisplay.GetComponent<TextMeshProUGUI>().text = "Bytes: " + InternalByte;
+        //InternalByte = ByteCount;
+        ByteDisplay.GetComponent<TextMeshProUGUI>().text = "Bytes: " + ByteCount;
         //passive byte generation
         timer+=Time.deltaTime;
         if(timer >= passiveByteTimer){
-            ByteCount += UpgradeManager.bytePerSecond;
+            generatePassiveBytes();
             timer = 0.0f;
         }
     
@@ -31,8 +36,13 @@ public class GlobalBytes : MonoBehaviour
 
 
 
-
-
+    private void generatePassiveBytes()
+    {
+        ByteCount += (int)(UpgradeManager.bytePerSecond * combinedMultiplier());
+    }
+    public float combinedMultiplier(){
+        return 1 - UpgradeManager.bpsMultiplier + UpgradeManager.bytePerSecond;
+    }
 
 
     public int GetByteCount(){
@@ -40,5 +50,14 @@ public class GlobalBytes : MonoBehaviour
     }
     public void SetByteCount(int newByteCount){
         ByteCount = newByteCount;
+    }
+
+
+
+    public void AddBytes(int bytesToAdd){
+        ByteCount += bytesToAdd;
+    }
+    public void RemoveBytes(int bytesToRemove){
+        ByteCount -= bytesToRemove;
     }
 }

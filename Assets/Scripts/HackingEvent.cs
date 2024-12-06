@@ -72,7 +72,7 @@ public class HackingEvent : MonoBehaviour
 
     private void FailHack(){
         Debug.Log("Hack Failed! Losing 20% of bytes.");
-        GlobalBytes.SetByteCount(GlobalBytes.GetByteCount() - (int)(GlobalBytes.GetByteCount() * 0.15f));
+        GlobalBytes.RemoveBytes((int)(GlobalBytes.GetByteCount() * 0.15f));
         EndHack();
     }
 

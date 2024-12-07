@@ -376,7 +376,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -255.8659, w: -46.322876}
+  m_margin: {x: 0, y: 0, z: -120.16504, w: 11.475646}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -424,7 +424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 645.00006, y: 363}
+  m_AnchoredPosition: {x: 439, y: 366}
   m_SizeDelta: {x: 294.9288, y: 105.3749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150967442
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlobalBytes: {fileID: 173363416}
-  upgradeSound: {fileID: 8300000, guid: 09187ba2adb6a304cae1f1c0b957c31e, type: 3}
+  upgradeSound: {fileID: 8300000, guid: 56a271ad4c2980e4abc1f545f2c76060, type: 3}
   audioSource: {fileID: 911032213}
   bytePerClickUpgrade: {fileID: 1827228788}
   bytePerSecondUpgrade: {fileID: 418208948}
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -12.633179, z: -501.33276, w: -58.9563}
+  m_margin: {x: 0, y: -12.633179, z: -385.7357, w: -58.9563}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1265,7 +1265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -249, y: 344}
+  m_AnchoredPosition: {x: -329, y: 344}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &418208948
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -4.2109375, z: -370.5818, w: -54.74518}
+  m_margin: {x: 0, y: -4.2109375, z: -320.32227, w: -54.74518}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1696,7 +1696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -251, y: 448}
+  m_AnchoredPosition: {x: -331, y: 448}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &663033110
@@ -2038,7 +2038,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 6467200556532302811, guid: 46ce05f3112783d4897479cf2440f6ac, type: 2}
-  m_audioClip: {fileID: 8300000, guid: cb7ad048d2a07f8499384f8b621d9bfb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0c719ff6a2e6791449557ceb0d4f8d37, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -3482,7 +3482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 645.00006, y: 449}
+  m_AnchoredPosition: {x: 439, y: 452}
   m_SizeDelta: {x: 294.9288, y: 105.3749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365201046
@@ -3735,7 +3735,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -429.60425, w: -51.885254}
+  m_margin: {x: 0, y: 0, z: -286.3645, w: -51.885254}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4423,7 +4423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 645, y: 273}
+  m_AnchoredPosition: {x: 438.99994, y: 276}
   m_SizeDelta: {x: 294.9288, y: 105.3749}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053821541

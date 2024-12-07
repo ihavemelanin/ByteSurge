@@ -41,7 +41,10 @@ public class GlobalBytes : MonoBehaviour
         ByteCount += (int)(UpgradeManager.bytePerSecond * combinedMultiplier());
     }
     public float combinedMultiplier(){
-        return 1 - UpgradeManager.bpsMultiplier + UpgradeManager.bytePerSecond;
+        Debug.Log(1.0f + (UpgradeManager.bpsMultiplier - 1.0f) + (ClickHandler.comboMultiplier - 1.0f));
+        Debug.Log("bpsMult"+UpgradeManager.bpsMultiplier);
+        Debug.Log("comboMult"+ClickHandler.comboMultiplier);
+        return 1.0f + (UpgradeManager.bpsMultiplier - 1.0f) + (ClickHandler.comboMultiplier - 1.0f);
     }
 
 

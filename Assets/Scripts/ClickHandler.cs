@@ -25,6 +25,9 @@ public class ClickHandler : MonoBehaviour
     public TextMeshProUGUI currentMultiplierText;
     public TextMeshProUGUI bpsMultiplierText;
     public TextMeshProUGUI maxComboText;
+    public TextMeshProUGUI maxClickMultiplierText;
+    public TextMeshProUGUI bytesPerClickText;
+    public TextMeshProUGUI bytesPerSecondText;
 
 
 
@@ -48,6 +51,11 @@ public class ClickHandler : MonoBehaviour
         maxComboText.text = "Max Combo: " + maxCombo + "x";
         currentMultiplierText.text = "Current Multiplier: " + comboMultiplier + "x";
         bpsMultiplierText.text = "Byte Per Second Multiplier: " + UpgradeManager.bpsMultiplier + "x";
+        maxClickMultiplierText.text = "Max Byte Per Click Multiplier: " + UpgradeManager.maxBytePerClickMultiplier + "x";
+        bytesPerClickText.text = "Bytes Per Click: " + UpgradeManager.bytePerClick;
+        bytesPerSecondText.text = "Bytes Per Second: " + UpgradeManager.bytePerSecond + " x " + GlobalBytes.combinedMultiplier() + " = " + (int)(UpgradeManager.bytePerSecond * GlobalBytes.combinedMultiplier());
+
+        
     }
 
     public void ClickButton(){
